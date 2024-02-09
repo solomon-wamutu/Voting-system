@@ -12,7 +12,22 @@ if (isset($_SESSION['SESS_NAME']) != "") {
 <center>
 	<legend>
 		<h3> Register </h3>
-	</legend>
+	</legend> <!-- <div class="input-group mb-3">
+							<input type="text" name="address" required class="form-control" placeholder="Client Address">
+							<div class="input-group-append">
+								<div class="input-group-text">
+									<span class="fas fa-map-marker"></span>
+								</div>
+							</div>
+						</div> -->
+	<!-- <div class="input-group mb-3">
+							<input type="email" name="email" required class="form-control" placeholder="Client Address">
+							<div class="input-group-append">
+								<div class="input-group-text">
+									<span class="fas fa-envelope"></span>
+								</div>
+							</div>
+						</div> -->
 </center>
 <?php global $nam;
 echo $nam; ?>
@@ -56,7 +71,7 @@ echo $error; ?>
 				<div class="card-body login-card-body">
 					<p class="login-box-msg">Sign Up To Use the Voting System</p>
 
-					<form method="post">
+					<form method="post" action="reg_action.php" id="myform">
 						<div class="input-group mb-3">
 							<input type="text" name="firstname" required class="form-control" placeholder="First Name">
 							<div class="input-group-append">
