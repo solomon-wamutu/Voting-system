@@ -44,72 +44,45 @@ echo $error; ?>
 	<!DOCTYPE html>
 	<html>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<?php include("dist/_partials/head.php"); ?>
+	<?php include("header.php"); ?>
 
 	<body class="hold-transition login-page">
 		<div class="login-box">
 			<div class="login-logo">
-				<p><?php echo $auth->sys_name; ?> - Sign Up</p>
+				<p>Online Voting - Sign Up</p>
 			</div>
 			<!-- /.login-logo -->
 			<div class="card">
 				<div class="card-body login-card-body">
-					<p class="login-box-msg">Sign Up To Use Our IBanking System</p>
+					<p class="login-box-msg">Sign Up To Use the Voting System</p>
 
 					<form method="post">
 						<div class="input-group mb-3">
-							<input type="text" name="name" required class="form-control" placeholder="Client Full Name">
+							<input type="text" name="firstname" required class="form-control" placeholder="First Name">
 							<div class="input-group-append">
 								<div class="input-group-text">
-									<span class="fas fa-user"></span>
+									<span class="fas fa-user 1"></span>
 								</div>
 							</div>
 						</div>
 						<div class="input-group mb-3">
-							<input type="text" required name="national_id" class="form-control" placeholder="National ID Number">
+							<input type="text" required name="lastname" class="form-control" placeholder="Last Name">
 							<div class="input-group-append">
 								<div class="input-group-text">
-									<span class="fas fa-tag"></span>
+									<span class="fas fa-user 2"></span>
 								</div>
 							</div>
 						</div>
+
 						<div class="input-group mb-3">
-							<!-- style="display:block;" -->
-							<?php
-							//PHP function to generate random
-							$length = 4;
-							$_Number =  substr(str_shuffle('0123456789'), 1, $length); ?>
-							<input type="text" name="client_number" value="iBank-CLIENT-<?php echo $_Number; ?>" class="form-control" placeholder="Client Number">
-							<div class="input-group-append">
-								<div class="input-group-text">
-									<span class="fas fa-envelope"></span>
-								</div>
-							</div>
-						</div>
-						<div class="input-group mb-3">
-							<input type="text" name="phone" required class="form-control" placeholder="Client Phone Number">
+							<input type="text" name="username" required class="form-control" placeholder="Username">
 							<div class="input-group-append">
 								<div class="input-group-text">
 									<span class="fas fa-phone"></span>
 								</div>
 							</div>
 						</div>
-						<div class="input-group mb-3">
-							<input type="text" name="address" required class="form-control" placeholder="Client Address">
-							<div class="input-group-append">
-								<div class="input-group-text">
-									<span class="fas fa-map-marker"></span>
-								</div>
-							</div>
-						</div>
-						<div class="input-group mb-3">
-							<input type="email" name="email" required class="form-control" placeholder="Client Address">
-							<div class="input-group-append">
-								<div class="input-group-text">
-									<span class="fas fa-envelope"></span>
-								</div>
-							</div>
-						</div>
+
 						<div class="input-group mb-3">
 							<input type="password" name="password" required class="form-control" placeholder="Password">
 							<div class="input-group-append">
