@@ -59,7 +59,9 @@ echo $error; ?>
 	<!DOCTYPE html>
 	<html>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<?php include("header.php"); ?>
+
+	<!-- include("header.php"); -->
+	  <!-- ?> -->
 
 	<body class="hold-transition login-page">
 		<div class="login-box">

@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><?php echo $sys->sys_name; ?> - <?php echo $sys->sys_tagline; ?></title>
+    <title>Online Voting</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- overlayScrollbars -->
@@ -25,7 +25,7 @@
     <!--load swal js -->
     <script src="dist/js/swal.js"></script>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="../admin/dist/img/<?php echo $sys->sys_logo; ?>">
+    <link rel="icon" type="image/jpg" sizes="16x16" href="./dist/vote.jpg">
     <!-- Data Tables CSS -->
     <link rel="stylesheet" type="text/css" href="plugins/datatable/custom_dt_html5.css">
 
