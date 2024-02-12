@@ -27,7 +27,7 @@ $sq = mysqli_query($con, 'SELECT username FROM loginusers WHERE username="'.$_PO
 $exist = mysqli_num_rows($sq);
 	
 		if($exist==1){
-		$nam="<center><h4><font color='#FF0000'>The username already exist, peak another.</h4></center></font>";
+		$nam="<center><h4><font color='#FF0000'>The username already exist, use another.</h4></center></font>";
 		unset($username);
 		include('register.php');
 		exit();
@@ -43,6 +43,7 @@ if (!$sql2) {
 		 die (mysqli_error($con));
 		 }
 else {
+header('Location:login.php');
 echo "Successfully Registered!  <a href= 'login.php'>Clich here to Login </a>";
 }
 }

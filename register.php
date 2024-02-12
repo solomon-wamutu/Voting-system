@@ -61,7 +61,7 @@ echo $error; ?>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 
 	<!-- include("header.php"); -->
-	  <!-- ?> -->
+	<!-- ?> -->
 
 	<body class="hold-transition login-page">
 		<div class="login-box">
@@ -109,18 +109,21 @@ echo $error; ?>
 							</div>
 						</div>
 						<div class="row">
-							<div class="col-8">
+							<div class="col-12">
+								<div class="g-recaptcha" data-sitekey="6LeD3hEUAAAAAKne6ua3iVmspK3AdilgB6dcjST0"></div>
 							</div>
+						</div>
+						<div class="row">
+							<div class="col-8"></div>
 							<!-- /.col -->
 							<div class="col-4">
-								<button type="submit" name="create_account" class="btn btn-success btn-block">Sign Up</button>
+								<button type="submit" name="submit" class="btn btn-success btn-block">Sign Up</button>
 							</div>
 							<!-- /.col -->
 						</div>
 					</form>
-
 					<p class="mb-0">
-						<a href="pages_client_index.php" class="text-center">Login</a>
+						<a href="login.php" class="text-center">Login</a>
 					</p>
 
 				</div>
@@ -135,20 +138,20 @@ echo $error; ?>
 		<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<!-- AdminLTE App -->
 		<script src="dist/js/adminlte.min.js"></script>
+		<script src='https://www.google.com/recaptcha/api.js'></script>
+		<script type="text/javascript">
+			var frmvalidator = new Validator("myform");
+			frmvalidator.addValidation("firstname", "req", "Please enter student firstname");
+			frmvalidator.addValidation("firstname", "maxlen=50");
+			frmvalidator.addValidation("lastname", "req", "Please enter student lastname");
+			frmvalidator.addValidation("lastname", "maxlen=50");
+			frmvalidator.addValidation("username", "req", "Please enter student username");
+			frmvalidator.addValidation("username", "maxlen=50");
+			frmvalidator.addValidation("password", "req", "Please enter student password");
+			frmvalidator.addValidation("password", "minlen=6", "Password must not be less than 6 characters.");
+		</script>
+		<?php include "footer.php"; ?>
 
 	</body>
 
 	</html>
-	<script src='https://www.google.com/recaptcha/api.js'></script>
-	<script type="text/javascript">
-		var frmvalidator = new Validator("myform");
-		frmvalidator.addValidation("firstname", "req", "Please enter student firstname");
-		frmvalidator.addValidation("firstname", "maxlen=50");
-		frmvalidator.addValidation("lastname", "req", "Please enter student lastname");
-		frmvalidator.addValidation("lastname", "maxlen=50");
-		frmvalidator.addValidation("username", "req", "Please enter student username");
-		frmvalidator.addValidation("username", "maxlen=50");
-		frmvalidator.addValidation("password", "req", "Please enter student password");
-		frmvalidator.addValidation("password", "minlen=6", "Password must not be less than 6 characters.");
-	</script>
-	<?php include "footer.php"; ?>
