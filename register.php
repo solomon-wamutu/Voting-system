@@ -12,50 +12,14 @@ if (isset($_SESSION['SESS_NAME']) != "") {
 <center>
 	<legend>
 		<h3> Register </h3>
-	</legend> <!-- <div class="input-group mb-3">
-							<input type="text" name="address" required class="form-control" placeholder="Client Address">
-							<div class="input-group-append">
-								<div class="input-group-text">
-									<span class="fas fa-map-marker"></span>
-								</div>
-							</div>
-						</div> -->
-	<!-- <div class="input-group mb-3">
-							<input type="email" name="email" required class="form-control" placeholder="Client Address">
-							<div class="input-group-append">
-								<div class="input-group-text">
-									<span class="fas fa-envelope"></span>
-								</div>
-							</div>
-						</div> -->
+	</legend> 
 </center>
 <?php global $nam;
 echo $nam; ?>
 <?php global $error;
 echo $error; ?>
 <center>
-	<!-- <form action="reg_action.php" method="post" id="myform">
-			Firstname:
-			<input type="text" name="firstname" value="" />
-			<br>
-			<br>
-			Lastname:
-			<input type="text" name="lastname" value="" />
-			<br>
-			<br>
-			Username:
-			<input type="text" name="username" value="" />
-			<br>
-			<br>
-			Password:
-			<input type="password" name="password" value="" />
-			<br>
-			<br>
-			<div class="g-recaptcha" data-sitekey="6LeD3hEUAAAAAKne6ua3iVmspK3AdilgB6dcjST0"></div>
-			<br>
-			<br>
-			<input type="submit" name="submit" value="Next" />
-		</form> -->
+
 	<!DOCTYPE html>
 	<html>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />

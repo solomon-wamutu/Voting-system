@@ -1,20 +1,12 @@
 <?php
 session_start();
-// include "header.php";
+include "header.php";
 if (!isset($_SESSION)) {
 }
 if (isset($_SESSION['SESS_NAME']) != "") {
-	// header("Location: voter.php");
+	header("Location: voter.php");
 }
 ?>
-<br>
-<center>
-	<legend>
-		<h3>Login for Voting </h3>
-	</legend>
-	<br>
-</center>
-
 <?php global $nam;
 echo $nam; ?>
 <?php global $error;
@@ -37,20 +29,7 @@ Password :
 <!DOCTYPE html>
 <html>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<style>
-	[class*=icheck-]>label {
-		padding-left: 29px !important;
-		min-height: 22px;
-		line-height: 22px;
-		display: inline-block;
-		position: relative;
-		vertical-align: top;
-		margin-bottom: 0;
-		font-weight: 400;
-		cursor: pointer;
-	}
-</style>
-<?php include("header.php");
+<?php //include("header.php");
 ?>
 
 
@@ -82,12 +61,12 @@ Password :
 						</div>
 						<div class="row">
 							<div class="col-8">
-								<div class="icheck-primary">
+								<!-- <div class="icheck-primary">
 									<input type="checkbox" id="remember">
 									<label for="remember">
 										Remember Me
 									</label>
-								</div>
+								</div> -->
 							</div>
 							<!-- /.col -->
 							<div class="col-4">
@@ -97,17 +76,6 @@ Password :
 						</div>
 					</form>
 
-
-					<!-- /.social-auth-links -->
-
-					<p class="mb-1">
-						<a href="pages_reset_pwd.php">I forgot my password</a>
-					</p>
-
-
-					<p class="mb-0">
-						<a href="pages_client_signup.php" class="text-center">Register a new account</a>
-					</p>
 
 				</div>
 				<!-- /.login-card-body -->
