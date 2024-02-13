@@ -4,6 +4,27 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- icheck bootstrap -->
+    <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!--Data tables css-->
+    <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+    <!--load swal js -->
+    <script src="dist/js/swal.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpg" sizes="16x16" href="./dist/vote.jpg">
+    <!-- Data Tables CSS -->
+    <link rel="stylesheet" type="text/css" href="plugins/datatable/custom_dt_html5.css">
     <script src="jscript/validation.js" type="text/javascript"></script>
 </head>
 
@@ -183,7 +204,7 @@
                                     <p>Transfers</p>
                                 </a>
                             </li> -->
-                            <!--
+                    <!--
               <li class="nav-item">
                 <a href="pages_loans.php" class="nav-link">
                   <i class="fas fa-cart-arrow-down nav-icon"></i>
@@ -192,7 +213,7 @@
               </li>
 
               -->
-                            <!-- <li class="nav-item">
+                    <!-- <li class="nav-item">
                                 <a href="pages_balance_enquiries.php" class="nav-link">
                                     <i class="fas fa-money-bill-alt nav-icon"></i>
                                     <p>Balance Enquiries</p>
