@@ -30,7 +30,7 @@
 
 <body style="background-color:#EBE9E9;">
     <marquee>Welcome To Online Voting System</marquee>
-    <center>
+    <!-- <center>
         <font size='6'>
             <a href="voter.php">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="lan_view.php">Vote Results</a>&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -39,7 +39,7 @@
             &nbsp;&nbsp;|&nbsp;&nbsp;
             <a href="change_pass.php">Change Password</a>
         </font>
-    </center>
+    </center> -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
         <a href="pages_dashboard.php" class="brand-link">
@@ -65,7 +65,7 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                     <li class="nav-item has-treeview">
-                        <a href="pages_dashboard.php" class="nav-link">
+                        <a href="voter.php" class="nav-link">
                             <i class="nav-icon fas fa-tachometer-alt"></i>
                             <p>
                                 Home
@@ -77,7 +77,7 @@
 
                     <!--Account -->
                     <li class="nav-item">
-                        <a href="pages_account.php" class="nav-link">
+                        <a href="lan_view.php" class="nav-link">
                             <i class="nav-icon fas fa-user-secret"></i>
                             <p>
                                 Results
@@ -88,7 +88,7 @@
 
                     <!--Ibank Staff-->
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                        <a href="profile.php" class="nav-link">
                             <i class="nav-icon fas fa-user-tie"></i>
                             <p>
                                 Profile
@@ -114,7 +114,7 @@
 
                     <!--Clients -->
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                        <a href="logout.php" class="nav-link">
                             <i class="nav-icon fas fa-users"></i>
                             <p>
                                 Logout
@@ -140,7 +140,7 @@
 
                     <!--iBank Accounts-->
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                        <a href="change_pass.php" class="nav-link">
                             <i class="nav-icon fas fa-briefcase"></i>
                             <p>
                                 Change Password
