@@ -74,7 +74,7 @@
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
-                        <ul class="nav nav-treeview">
+                        <!-- <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="pages_add_staff.php" class="nav-link">
                                     <i class="fas fa-user-plus nav-icon"></i>
@@ -87,7 +87,7 @@
                                     <p>Manage Staff</p>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <!-- ./iBank staff-->
 
@@ -100,7 +100,7 @@
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
-                        <ul class="nav nav-treeview">
+                        <!-- <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="pages_add_client.php" class="nav-link">
                                     <i class="fas fa-user-plus nav-icon"></i>
@@ -113,7 +113,7 @@
                                     <p>Manage Clients</p>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <!-- ./ Clients -->
 
@@ -126,7 +126,7 @@
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
-                        <ul class="nav nav-treeview">
+                        <!-- <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="pages_add_acc_type.php" class="nav-link">
                                     <i class="far fas fa-plus nav-icon"></i>
@@ -151,12 +151,12 @@
                                     <p>Manange Acc Openings</p>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <!--./ iBank Acounts-->
 
                     <!--Finances-->
-                    <li class="nav-item has-treeview">
+                    <!-- <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-dollar-sign"></i>
                             <p>
@@ -182,7 +182,7 @@
                                     <i class="fas fa-random nav-icon"></i>
                                     <p>Transfers</p>
                                 </a>
-                            </li>
+                            </li> -->
                             <!--
               <li class="nav-item">
                 <a href="pages_loans.php" class="nav-link">
@@ -192,16 +192,16 @@
               </li>
 
               -->
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a href="pages_balance_enquiries.php" class="nav-link">
                                     <i class="fas fa-money-bill-alt nav-icon"></i>
                                     <p>Balance Enquiries</p>
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
 
-                    <li class="nav-header">Advanced Modules</li>
+                    <!-- <li class="nav-header">Advanced Modules</li>
                     <li class="nav-item">
                         <a href="pages_transactions_engine.php" class="nav-link">
                             <i class="nav-icon fas fa-exchange-alt"></i>
@@ -210,9 +210,9 @@
                             </p>
                         </a>
                     </li>
-                    <!--./Transcactions Engine-->
+                    ./Transcactions Engine
 
-                    <!--Financial Reporting-->
+                    Financial Reporting
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-file-invoice-dollar"></i>
@@ -242,9 +242,9 @@
                             </li>
                         </ul>
                     </li>
-                    <!-- ./ End financial Reporting-->
+                    ./ End financial Reporting
 
-                    <!--Password Resets-->
+                    Password Resets
                     <li class="nav-item">
                         <a href="pages_system_settings.php" class="nav-link">
                             <i class="nav-icon fas fa-cogs"></i>
@@ -253,9 +253,9 @@
                             </p>
                         </a>
                     </li>
-                    <!-- ./ Password Resets-->
+                    ./ Password Resets
 
-                    <!-- Log Out -->
+                    Log Out
                     <li class="nav-item">
                         <a href="pages_logout.php" class="nav-link">
                             <i class="nav-icon fas fa-power-off"></i>
@@ -263,7 +263,7 @@
                                 Log Out
                             </p>
                         </a>
-                    </li>
+                    </li> -->
                     <!-- ./Log Out -->
                 </ul>
             </nav>
