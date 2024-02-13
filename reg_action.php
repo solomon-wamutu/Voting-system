@@ -49,6 +49,6 @@ echo "Successfully Registered!  <a href= 'login.php'>Clich here to Login </a>";
 }
 else {
 	 $error="<center><h4><font color='#FF0000'>Registration Failed Due To Error !</h4></center></font>";
-     include"register.php";
+     include "register.php";
 }
 ?>
