@@ -89,7 +89,7 @@ echo $error; ?>
 		<!-- Bootstrap 4 -->
 		<script src="plugins/bootstrap/j/bootstrap.bundle.min.js"></script>
 		<!-- AdminLTE App -->
-		<script src="dist/js/adminlte.min.j"></script>
+		<script src="dist/js/adminlte.min.js"></script>
 		<script type="text/javascript">
 			var frmvalidator = new Validator("myform");
 			frmvalidator.addValidation("username", "req", "Please Enter Username");
