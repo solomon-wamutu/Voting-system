@@ -21,7 +21,10 @@ if(isset($_POST['resetpassword'])){
         $n = date('y');
         $new_password = bin2hex(random_bytes($n));
         $querry = "UPDATE ibclient SET password = ? WHERE email=?";
-        
+        $stmt = $mysqli->prepare($querry);
+        $rc = $stmt->bind_param('ss',$new_password,$email);
+        $stmt->execute();
+        $_SESSION['email'] = $email;
     }
 }
 ?>
