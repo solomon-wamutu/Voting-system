@@ -1,11 +1,39 @@
-  <!DOCTYPE html>
+ <?php
+
+session_start();
+include('./connection.php');
+if(isset($_POST['resetpassword'])){
+    $error = 0;
+    if(isset($_POST['email']) && $_POST['email']){
+        $email = mysqli_real_escape_string($mysqli,trim($_POST['email']));
+    }
+    else{
+        $error = 1;
+        echo "Enter your Email Address";
+
+    }
+    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+        echo "Invalid Email Address";
+    }
+    $checkEmail = mysqli_query($mysqli,"SELECT email FROM ibclient WHERE email = '".$_POST['email']."'") or exit(mysqli_error($mysqli));
+
+    if(mysqli_num_rows($checkEmail) > 0){
+        $n = date('y');
+        $new_password = bin2hex(random_bytes($n));
+        $querry = "UPDATE ibclient SET password = ? WHERE email=?";
+        
+    }
+}
+?>
+ 
+ <!DOCTYPE html>
   <html>
   <?php include("dist/_partials/head.php"); ?>
 
   <body class="hold-transition login-page">
       <div class="login-box">
           <div class="login-logo">
-              <p><?php echo $auth->sys_name; ?> - <?php echo $auth->sys_tagline; ?></p>
+              <p>Online Voting</p>
           </div>
           <!-- /.login-logo -->
           <div class="card">
