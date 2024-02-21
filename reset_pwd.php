@@ -25,6 +25,16 @@ if(isset($_POST['resetpassword'])){
         $rc = $stmt->bind_param('ss',$new_password,$email);
         $stmt->execute();
         $_SESSION['email'] = $email;
+
+        if($stmt){
+            echo "Confirm your password" && header('refresh:1; url = confirm_password.php');
+        }
+        else{
+            echo "Password reset failed";
+        }
+    }
+    else{
+        echo "Email does not exist";
     }
 }
 ?>
