@@ -12,7 +12,8 @@ echo $nam; ?>
 <?php global $error;
 echo $error; ?>
 <br>
-<center><font size="4" >
+<center>
+	<font size="4">
 
 </center>
 
@@ -62,13 +63,23 @@ echo $error; ?>
 							<div class="col-4">
 								<button type="submit" name="login" class="btn btn-success btn-block">Log In</button>
 							</div>
-							<!-- /.col -->
-						</div>
+							<div class="row">
+								<div class="col-12">
+									<p class="">
+										<a href="reset_pwd.php" style="font-size: 15px; color:blue;">I forgot my password</a>
+									</p>
+								</div>
+							</div>
+								<!-- /.col -->
+							</div>
 					</form>
 
 
 				</div>
 				<!-- /.login-card-body -->
+				<!-- <p class="">
+					<a href="pages_reset_pwd.php">I forgot my password</a>
+				</p> -->
 			</div>
 		</div>
 		<!-- /.login-box -->
