@@ -9,7 +9,7 @@ $password = addslashes($password);
 $username = mysqli_real_escape_string($con,$username);
 $password = mysqli_real_escape_string($con,$password);
 
-$sql = mysqli_query($con, 'SELECT * FROM loginusers WHERE username="'.$_POST['username'].'"  AND password="'.md5($_POST['password']).'" AND status="ACTIVE" ' );
+$sql = mysqli_query($con, 'SELECT * FROM loginusers WHERE username="'.$_POST['username'].'"  AND password="'.sha1(md5($_POST['password'])).'" AND status="ACTIVE" ' );
 if (mysqli_num_rows($sql) >0 ) {
 	$member =  mysqli_fetch_assoc($sql);
 	$_SESSION['SESS_NAME'] = $member['username'];

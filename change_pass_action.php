@@ -3,9 +3,9 @@ session_start();
 include "auth.php";
 include "connection.php"; 
 if(isset($_POST['cpass'])) {
-	$currentpass = md5($_POST['cpassword']) ;
-	$newpass = md5($_POST['npassword']);
-	$cnewpass = md5($_POST['cnpassword']);
+	$currentpass = sha1(md5($_POST['cpassword'])) ;
+	$newpass = sha1(md5($_POST['npassword']));
+	$cnewpass = sha1(md5($_POST['cnpassword']));
 	$currentpass = addslashes($currentpass);
 	$newpass = addslashes($newpass);
 	$cnewpass = addslashes($cnewpass); 

@@ -38,7 +38,7 @@ $sql = mysqli_query($con, 'INSERT INTO voters(firstname,lastname,username)
 		 die (mysqli_error($con));
 		 }
 $sql2 = mysqli_query($con, 'INSERT INTO loginusers(username,password)
-         VALUES("'.$_POST['username'].'","'.md5($_POST['password']).'")'); 
+         VALUES("'.$_POST['username'].'","'.sha1(md5($_POST['password'])).'")'); 
 if (!$sql2) { 
 		 die (mysqli_error($con));
 		 }
