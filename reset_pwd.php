@@ -4,14 +4,14 @@
     include('./connection.php');
     if (isset($_POST['resetpassword'])) {
         $error = 0;
-        if (isset($_POST['username']) && $_POST['username']) {
+        if (isset($_POST['username']) && !empty($_POST['username'])) {
             $username = mysqli_real_escape_string($con, trim($_POST['username']));
         } else {
             $error = 1;
             echo "Enter your username Address";
         }
         if (!filter_var($_POST['username'], FILTER_VALIDATE_EMAIL)) {
-            echo "Invalid username Address";
+            echo "Invalid username";
         }
         $checkEmail = mysqli_query($con, "SELECT username FROM loginusers WHERE username = '" . $_POST['username'] . "'") or exit(mysqli_error($con));
 
