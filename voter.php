@@ -80,49 +80,49 @@ include "header_voter.php";
 // $stmt->close();
 
 //return total number of iBank Withdrawals
-$client_id = $_SESSION['client_id'];
-$result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE  client_id = ? AND tr_type = 'Withdrawal' ";
-$stmt = $mysqli->prepare($result);
-$stmt->bind_param('i', $client_id);
-$stmt->execute();
-$stmt->bind_result($iB_withdrawal);
-$stmt->fetch();
-$stmt->close();
+// $client_id = $_SESSION['client_id'];
+// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE  client_id = ? AND tr_type = 'Withdrawal' ";
+// $stmt = $mysqli->prepare($result);
+// $stmt->bind_param('i', $client_id);
+// $stmt->execute();
+// $stmt->bind_result($iB_withdrawal);
+// $stmt->fetch();
+// $stmt->close();
 
 
 
 //return total number of iBank Transfers
-$client_id = $_SESSION['client_id'];
-$result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE  client_id = ? AND tr_type = 'Transfer' ";
-$stmt = $mysqli->prepare($result);
-$stmt->bind_param('i', $client_id);
-$stmt->execute();
-$stmt->bind_result($iB_Transfers);
-$stmt->fetch();
-$stmt->close();
+// $client_id = $_SESSION['client_id'];
+// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE  client_id = ? AND tr_type = 'Transfer' ";
+// $stmt = $mysqli->prepare($result);
+// $stmt->bind_param('i', $client_id);
+// $stmt->execute();
+// $stmt->bind_result($iB_Transfers);
+// $stmt->fetch();
+// $stmt->close();
 
 //return total number of  iBank initial cash->balances
-$client_id = $_SESSION['client_id'];
-$result = "SELECT SUM(transaction_amt) FROM ib_transactions  WHERE client_id =?";
-$stmt = $mysqli->prepare($result);
-$stmt->bind_param('i', $client_id);
-$stmt->execute();
-$stmt->bind_result($acc_amt);
-$stmt->fetch();
-$stmt->close();
-//Get the remaining money in the accounts
-$TotalBalInAccount = ($iB_deposits)  - (($iB_withdrawal) + ($iB_Transfers));
+// $client_id = $_SESSION['client_id'];
+// $result = "SELECT SUM(transaction_amt) FROM ib_transactions  WHERE client_id =?";
+// $stmt = $mysqli->prepare($result);
+// $stmt->bind_param('i', $client_id);
+// $stmt->execute();
+// $stmt->bind_result($acc_amt);
+// $stmt->fetch();
+// $stmt->close();
+// //Get the remaining money in the accounts
+// $TotalBalInAccount = ($iB_deposits)  - (($iB_withdrawal) + ($iB_Transfers));
 
 
 //ibank money in the wallet
-$client_id = $_SESSION['client_id'];
-$result = "SELECT SUM(transaction_amt) FROM ib_transactions  WHERE client_id = ?";
-$stmt = $mysqli->prepare($result);
-$stmt->bind_param('i', $client_id);
-$stmt->execute();
-$stmt->bind_result($new_amt);
-$stmt->fetch();
-$stmt->close();
+// $client_id = $_SESSION['client_id'];
+// $result = "SELECT SUM(transaction_amt) FROM ib_transactions  WHERE client_id = ?";
+// $stmt = $mysqli->prepare($result);
+// $stmt->bind_param('i', $client_id);
+// $stmt->execute();
+// $stmt->bind_result($new_amt);
+// $stmt->fetch();
+// $stmt->close();
 //Withdrawal Computations
 
 ?>
