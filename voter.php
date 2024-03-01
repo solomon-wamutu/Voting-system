@@ -25,107 +25,7 @@ include "header_voter.php";
 </form>
 
 
-// session_start();
-// include('conf/config.php');
-// include('conf/checklogin.php');
-// check_login();
-// $client_id = $_SESSION['client_id'];
 
-/*
-get all dashboard analytics
-and numeric values from distinct
-tables
-*/
-
-//return total number of ibank clients
-// $result = "SELECT count(*) FROM ib_clients";
-// $stmt = $mysqli->prepare($result);
-// $stmt->execute();
-// $stmt->bind_result($iBClients);
-// $stmt->fetch();
-// $stmt->close();
-
-//return total number of iBank Staffs
-// $result = "SELECT count(*) FROM ib_staff";
-// $stmt = $mysqli->prepare($result);
-// $stmt->execute();
-// $stmt->bind_result($iBStaffs);
-// $stmt->fetch();
-// $stmt->close();
-
-//return total number of iBank Account Types
-// $result = "SELECT count(*) FROM ib_acc_types";
-// $stmt = $mysqli->prepare($result);
-// $stmt->execute();
-// $stmt->bind_result($iB_AccsType);
-// $stmt->fetch();
-// $stmt->close();
-
-//return total number of iBank Accounts
-// $result = "SELECT count(*) FROM ib_bankaccounts";
-// $stmt = $mysqli->prepare($result);
-// $stmt->execute();
-// $stmt->bind_result($iB_Accs);
-// $stmt->fetch();
-// $stmt->close();
-
-//return total number of iBank Deposits
-// $client_id = $_SESSION['client_id'];
-// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE client_id = ? AND tr_type = 'Deposit' ";
-// $stmt = $mysqli->prepare($result);
-// $stmt->bind_param('i', $client_id);
-// $stmt->execute();
-// $stmt->bind_result($iB_deposits);
-// $stmt->fetch();
-// $stmt->close();
-
-//return total number of iBank Withdrawals
-// $client_id = $_SESSION['client_id'];
-// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE client_id = ? AND tr_type = 'Withdrawal' ";
-// $stmt = $mysqli->prepare($result);
-// $stmt->bind_param('i', $client_id);
-// $stmt->execute();
-// $stmt->bind_result($iB_withdrawal);
-// $stmt->fetch();
-// $stmt->close();
-
-
-
-//return total number of iBank Transfers
-// $client_id = $_SESSION['client_id'];
-// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE client_id = ? AND tr_type = 'Transfer' ";
-// $stmt = $mysqli->prepare($result);
-// $stmt->bind_param('i', $client_id);
-// $stmt->execute();
-// $stmt->bind_result($iB_Transfers);
-// $stmt->fetch();
-// $stmt->close();
-
-//return total number of iBank initial cash->balances
-// $client_id = $_SESSION['client_id'];
-// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE client_id =?";
-// $stmt = $mysqli->prepare($result);
-// $stmt->bind_param('i', $client_id);
-// $stmt->execute();
-// $stmt->bind_result($acc_amt);
-// $stmt->fetch();
-// $stmt->close();
-// //Get the remaining money in the accounts
-// $TotalBalInAccount = ($iB_deposits) - (($iB_withdrawal) + ($iB_Transfers));
-
-
-//ibank money in the wallet
-// $client_id = $_SESSION['client_id'];
-// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE client_id = ?";
-// $stmt = $mysqli->prepare($result);
-// $stmt->bind_param('i', $client_id);
-// $stmt->execute();
-// $stmt->bind_result($new_amt);
-// $stmt->fetch();
-// $stmt->close();
-//Withdrawal Computations
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -339,14 +239,14 @@ tables
                                             <tbody>
                                                 <?php
                                                 //Get latest transactions ;
-                                                $client_id = $_SESSION['client_id'];
-                                                $ret = "SELECT * FROM ib_transactions WHERE  client_id = ?  ORDER BY ib_transactions. created_at DESC ";
-                                                $stmt = $mysqli->prepare($ret);
-                                                $stmt->bind_param('i', $client_id);
-                                                $stmt->execute(); //ok
-                                                $res = $stmt->get_result();
-                                                $cnt = 1;
-                                                while ($row = $res->fetch_object()) {
+                                                // $client_id = $_SESSION['client_id'];
+                                                // $ret = "SELECT * FROM ib_transactions WHERE  client_id = ?  ORDER BY ib_transactions. created_at DESC ";
+                                                // $stmt = $mysqli->prepare($ret);
+                                                // $stmt->bind_param('i', $client_id);
+                                                // $stmt->execute(); //ok
+                                                // $res = $stmt->get_result();
+                                                // $cnt = 1;
+                                                // while ($row = $res->fetch_object()) {
                                                     /* Trim Transaction Timestamp to 
                             *  User Uderstandable Formart  DD-MM-YYYY :
                             */
@@ -369,7 +269,7 @@ tables
                                                         <td><?php echo date("d-M-Y h:m:s ", strtotime($transTstamp)); ?></td>
                                                     </tr>
 
-                                                <?php } ?>
+                                                <?php //} ?>
 
                                             </tbody>
                                         </table>
