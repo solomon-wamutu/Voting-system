@@ -38,46 +38,46 @@ include "header_voter.php";
     */
 
 //return total number of ibank clients
-$result = "SELECT count(*) FROM ib_clients";
-$stmt = $mysqli->prepare($result);
-$stmt->execute();
-$stmt->bind_result($iBClients);
-$stmt->fetch();
-$stmt->close();
+// $result = "SELECT count(*) FROM ib_clients";
+// $stmt = $mysqli->prepare($result);
+// $stmt->execute();
+// $stmt->bind_result($iBClients);
+// $stmt->fetch();
+// $stmt->close();
 
 //return total number of iBank Staffs
-$result = "SELECT count(*) FROM ib_staff";
-$stmt = $mysqli->prepare($result);
-$stmt->execute();
-$stmt->bind_result($iBStaffs);
-$stmt->fetch();
-$stmt->close();
+// $result = "SELECT count(*) FROM ib_staff";
+// $stmt = $mysqli->prepare($result);
+// $stmt->execute();
+// $stmt->bind_result($iBStaffs);
+// $stmt->fetch();
+// $stmt->close();
 
 //return total number of iBank Account Types
-$result = "SELECT count(*) FROM ib_acc_types";
-$stmt = $mysqli->prepare($result);
-$stmt->execute();
-$stmt->bind_result($iB_AccsType);
-$stmt->fetch();
-$stmt->close();
+// $result = "SELECT count(*) FROM ib_acc_types";
+// $stmt = $mysqli->prepare($result);
+// $stmt->execute();
+// $stmt->bind_result($iB_AccsType);
+// $stmt->fetch();
+// $stmt->close();
 
 //return total number of iBank Accounts
-$result = "SELECT count(*) FROM ib_bankaccounts";
-$stmt = $mysqli->prepare($result);
-$stmt->execute();
-$stmt->bind_result($iB_Accs);
-$stmt->fetch();
-$stmt->close();
+// $result = "SELECT count(*) FROM ib_bankaccounts";
+// $stmt = $mysqli->prepare($result);
+// $stmt->execute();
+// $stmt->bind_result($iB_Accs);
+// $stmt->fetch();
+// $stmt->close();
 
 //return total number of iBank Deposits
-$client_id = $_SESSION['client_id'];
-$result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE  client_id = ? AND tr_type = 'Deposit' ";
-$stmt = $mysqli->prepare($result);
-$stmt->bind_param('i', $client_id);
-$stmt->execute();
-$stmt->bind_result($iB_deposits);
-$stmt->fetch();
-$stmt->close();
+// $client_id = $_SESSION['client_id'];
+// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE  client_id = ? AND tr_type = 'Deposit' ";
+// $stmt = $mysqli->prepare($result);
+// $stmt->bind_param('i', $client_id);
+// $stmt->execute();
+// $stmt->bind_result($iB_deposits);
+// $stmt->fetch();
+// $stmt->close();
 
 //return total number of iBank Withdrawals
 $client_id = $_SESSION['client_id'];
