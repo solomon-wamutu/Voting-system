@@ -10,7 +10,7 @@
             $error = 1;
             echo "Enter your username Address";
         }
-        if (!filter_var($_POST['username'], FILTER_VALIDATE_EMAIL)) {
+        if (!filter_var($_POST['username'])) {
             echo "Invalid username";
         }
         $checkEmail = mysqli_query($con, "SELECT username FROM loginusers WHERE username = '" . $_POST['username'] . "'") or exit(mysqli_error($con));
