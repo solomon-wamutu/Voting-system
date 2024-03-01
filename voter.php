@@ -4,7 +4,7 @@ if (!isset($_SESSION)) {
 }
 include "auth.php";
 include "header_voter.php";
-
+?>
 <h4> Welcome <?php echo $_SESSION['SESS_NAME']; ?> </h4>
 <h3>Make a Vote </h3>
 <form action="submit_vote.php" name="vote" method="post" id="myform">
@@ -28,14 +28,14 @@ include "header_voter.php";
 // session_start();
 // include('conf/config.php');
 // include('conf/checklogin.php');
-// check_login(); -->
+// check_login();
 // $client_id = $_SESSION['client_id'];
 
 /*
-    get all dashboard analytics 
-    and numeric values from distinct 
-    tables
-    */
+get all dashboard analytics
+and numeric values from distinct
+tables
+*/
 
 //return total number of ibank clients
 // $result = "SELECT count(*) FROM ib_clients";
@@ -71,7 +71,7 @@ include "header_voter.php";
 
 //return total number of iBank Deposits
 // $client_id = $_SESSION['client_id'];
-// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE  client_id = ? AND tr_type = 'Deposit' ";
+// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE client_id = ? AND tr_type = 'Deposit' ";
 // $stmt = $mysqli->prepare($result);
 // $stmt->bind_param('i', $client_id);
 // $stmt->execute();
@@ -81,7 +81,7 @@ include "header_voter.php";
 
 //return total number of iBank Withdrawals
 // $client_id = $_SESSION['client_id'];
-// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE  client_id = ? AND tr_type = 'Withdrawal' ";
+// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE client_id = ? AND tr_type = 'Withdrawal' ";
 // $stmt = $mysqli->prepare($result);
 // $stmt->bind_param('i', $client_id);
 // $stmt->execute();
@@ -93,7 +93,7 @@ include "header_voter.php";
 
 //return total number of iBank Transfers
 // $client_id = $_SESSION['client_id'];
-// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE  client_id = ? AND tr_type = 'Transfer' ";
+// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE client_id = ? AND tr_type = 'Transfer' ";
 // $stmt = $mysqli->prepare($result);
 // $stmt->bind_param('i', $client_id);
 // $stmt->execute();
@@ -101,9 +101,9 @@ include "header_voter.php";
 // $stmt->fetch();
 // $stmt->close();
 
-//return total number of  iBank initial cash->balances
+//return total number of iBank initial cash->balances
 // $client_id = $_SESSION['client_id'];
-// $result = "SELECT SUM(transaction_amt) FROM ib_transactions  WHERE client_id =?";
+// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE client_id =?";
 // $stmt = $mysqli->prepare($result);
 // $stmt->bind_param('i', $client_id);
 // $stmt->execute();
@@ -111,12 +111,12 @@ include "header_voter.php";
 // $stmt->fetch();
 // $stmt->close();
 // //Get the remaining money in the accounts
-// $TotalBalInAccount = ($iB_deposits)  - (($iB_withdrawal) + ($iB_Transfers));
+// $TotalBalInAccount = ($iB_deposits) - (($iB_withdrawal) + ($iB_Transfers));
 
 
 //ibank money in the wallet
 // $client_id = $_SESSION['client_id'];
-// $result = "SELECT SUM(transaction_amt) FROM ib_transactions  WHERE client_id = ?";
+// $result = "SELECT SUM(transaction_amt) FROM ib_transactions WHERE client_id = ?";
 // $stmt = $mysqli->prepare($result);
 // $stmt->bind_param('i', $client_id);
 // $stmt->execute();
@@ -136,11 +136,13 @@ include "header_voter.php";
 
     <div class="wrapper">
         <!-- Navbar -->
-        <?php include("dist/_partials/nav.php"); ?>
+        <?php //include("dist/_partials/nav.php"); 
+        ?>
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <?php include("dist/_partials/sidebar.php"); ?>
+        <?php //include("dist/_partials/sidebar.php"); 
+        ?>
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
@@ -171,10 +173,10 @@ include "header_voter.php";
                             <div class="info-box">
                                 <span class="info-box-icon bg-info elevation-1"><i class="fas fa-upload"></i></span>
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Deposits</span>
+                                    <!-- <span class="info-box-text">Deposits</span>
                                     <span class="info-box-number">
-                                        $ <?php echo $iB_deposits; ?>
-                                    </span>
+                                        $ <?php //echo $iB_deposits; ?>
+                                    </span> -->
                                 </div>
                             </div>
                         </div>
@@ -183,11 +185,11 @@ include "header_voter.php";
                         <!--iBank Withdrwals-->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-download"></i></span>
+                                <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-upload"></i></span>
 
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Withdrawals</span>
-                                    <span class="info-box-number">$ <?php echo $iB_withdrawal; ?> </span>
+                                    <!-- <span class="info-box-text">Withdrawals</span>
+                                    <span class="info-box-number">$ <?php // echo $iB_withdrawal; ?> </span> -->
                                 </div>
                             </div>
                         </div>
@@ -199,10 +201,10 @@ include "header_voter.php";
                         <!--Transfers-->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-random"></i></span>
+                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-upload"></i></span>
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Transfers</span>
-                                    <span class="info-box-number">$ <?php echo $iB_Transfers; ?></span>
+                                    <!-- <span class="info-box-text">Transfers</span>
+                                    <span class="info-box-number">$ <?php // echo $iB_Transfers; ?></span> -->
                                 </div>
                             </div>
                         </div>
@@ -211,10 +213,10 @@ include "header_voter.php";
                         <!--Balances-->
                         <div class="col-12 col-sm-6 col-md-3">
                             <div class="info-box mb-3">
-                                <span class="info-box-icon bg-purple elevation-1"><i class="fas fa-money-bill-alt"></i></span>
+                                <span class="info-box-icon bg-purple elevation-1"><i class="fas fa-upload"></i></span>
                                 <div class="info-box-content">
-                                    <span class="info-box-text">Wallet Balance</span>
-                                    <span class="info-box-number">$ <?php echo $TotalBalInAccount; ?></span>
+                                    <!-- <span class="info-box-text">Wallet Balance</span>
+                                    <span class="info-box-number">$ <?php //echo $TotalBalInAccount; ?></span> -->
                                 </div>
                             </div>
                         </div>
