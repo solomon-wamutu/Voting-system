@@ -76,12 +76,10 @@ include "header_voter.php";
                                 <div class="info-box">
                                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-upload"></i></span>
                                     <div class="info-box-content">
-                                        <!-- <span class="info-box-text">Deposits</span>
-                                    <span class="info-box-number">
-                                        $ <?php //echo $iB_deposits; 
-                                            ?>
-                                    </span> -->
-                                        <input type="radio" name="lan" value="BJP"> BJP<BR>
+
+                                        <font size='6'>
+                                            <input type="radio" name="lan" value="BJP"> PHP<BR>
+                                        </font>
                                     </div>
                                 </div>
                             </div>
@@ -93,9 +91,9 @@ include "header_voter.php";
                                     <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-upload"></i></span>
 
                                     <div class="info-box-content">
-                                        <!-- <span class="info-box-text">Withdrawals</span>
-                                    <span class="info-box-number">$ <?php // echo $iB_withdrawal; 
-                                                                    ?> </span> -->
+                                        <font size='6'>
+                                            <input type="radio" name="lan" value="BJP"> PHP<BR>
+                                        </font>
                                     </div>
                                 </div>
                             </div>
@@ -109,9 +107,9 @@ include "header_voter.php";
                                 <div class="info-box mb-3">
                                     <span class="info-box-icon bg-success elevation-1"><i class="fas fa-upload"></i></span>
                                     <div class="info-box-content">
-                                        <!-- <span class="info-box-text">Transfers</span>
-                                    <span class="info-box-number">$ <?php // echo $iB_Transfers; 
-                                                                    ?></span> -->
+                                        <font size='6'>
+                                            <input type="radio" name="lan" value="BJP"> PHP<BR>
+                                        </font>
                                     </div>
                                 </div>
                             </div>
@@ -122,44 +120,8 @@ include "header_voter.php";
                                 <div class="info-box mb-3">
                                     <span class="info-box-icon bg-purple elevation-1"><i class="fas fa-upload"></i></span>
                                     <div class="info-box-content">
-                                        <!-- <span class="info-box-text">Wallet Balance</span>
-                                    <span class="info-box-number">$ <?php //echo $TotalBalInAccount; 
-                                                                    ?></span> -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- ./Balances-->
-                        </div>
-                    </form>
-
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title">Advanced Analytics</h5>
-                                    <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
-                                            <i class="fas fa-times"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <!-- /.card-header -->
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="chart">
-                                                <!-- Transaction Donought chart Canvas -->
-                                                <div id="PieChart" class="col-md-6" style="height: 400px; max-width: 500px; margin: 0px auto;"></div>
-                                            </div>
-                                            <!-- /.chart-responsive -->
-                                        </div>
-                                        <hr>
-                                        <div class="col-md-6">
-                                            <div class="chart">
-                                                <div id="AccountsPerAccountCategories" class="col-md-6" style="height: 400px; max-width: 500px; margin: 0px auto;"></div>
+                                        <font size='6'>
+                                            <input type="radio" max-width: 500px; margin: 0px auto;"></div>
                                             </div>
                                             <!-- /.chart-responsive -->
                                         </div>
@@ -208,110 +170,246 @@ include "header_voter.php";
                                 <!-- /.card-footer -->
                             </div>
                             <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
-                    </div>
-                    <!-- /.row -->
-
-                    <!-- Main row -->
-                    <div class="row">
-                        <!-- Left col -->
-                        <div class="col-md-12">
-                            <!-- TABLE: Transactions -->
-                            <div class="card">
-                                <div class="card-header border-transparent">
-                                    <h3 class="card-title">Latest Transactions</h3>
-
-                                    <div class="card-tools">
-                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                            <i class="fas fa-minus"></i>
-                                        </button>
-                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
-                                            <i class="fas fa-times"></i>
-                                        </button>
+                        </div>name="lan" value="BJP"> PHP<BR>
+                                        </font>
                                     </div>
                                 </div>
-                                <!-- /.card-header -->
-                                <div class="card-body p-0">
-                                    <div class="table-responsive">
-                                        <table class="table table-striped table-hover m-0">
-                                            <thead>
-                                                <tr>
-                                                    <th>Transaction Code</th>
-                                                    <th>Account No.</th>
-                                                    <th>Type</th>
-                                                    <th>Amount</th>
-                                                    <th>Acc. Owner</th>
-                                                    <th>Timestamp</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php
-                                                //Get latest transactions ;
-                                                // $client_id = $_SESSION['client_id'];
-                                                // $ret = "SELECT * FROM ib_transactions WHERE  client_id = ?  ORDER BY ib_transactions. created_at DESC ";
-                                                // $stmt = $mysqli->prepare($ret);
-                                                // $stmt->bind_param('i', $client_id);
-                                                // $stmt->execute(); //ok
-                                                // $res = $stmt->get_result();
-                                                // $cnt = 1;
-                                                // while ($row = $res->fetch_object()) {
-                                                /* Trim Transaction Timestamp to 
+                            </div>
+                            <!-- ./Balances-->
+                        </div>
+                    </form>
+
+                    <div class="row">
+
+    <!-- /.row -->
+    </div>
+    <!-- ./card-body -->
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                    <h5 class="description-header">$ <?php echo $iB_deposits; ?></h5>
+                    <span class="description-text">TOTAL DEPOSITS</span>
+                </div>
+                <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                    <h5 class="description-header">$ <?php echo $iB_withdrawal; ?></h5>
+                    <span class="description-text">TOTAL WITHDRAWALS</span>
+                </div>
+                <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                    <h5 class="description-header">$ <?php echo $iB_Transfers; ?> </h5>
+                    <span class="description-text">TOTAL TRANSFERS</span>
+                </div>
+                <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-3 col-6">
+                <div class="description-block">
+                    <h5 class="description-header">$ <?php echo $new_amt; ?> </h5>
+                    <span class="description-text">TOTAL MONEY IN Account</span>
+                </div>
+                <!-- /.description-block -->
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.card-footer -->
+    </div>
+    <!-- /.card -->
+    </div>
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.card-footer -->
+    </div>
+    <!-- /.card -->
+    </div>
+    <!-- /.col -->
+    <div class="col-sm-3 col-6">
+        <div class="description-block">
+            <h5 class="description-header">$ <?php echo $new_amt; ?> </h5>
+            <span class="description-text">TOTAL MONEY IN Account</span>
+        </div>
+        <!-- /.description-block -->
+    </div>
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- /.card-footer -->
+    </div>
+    <!-- /.card -->
+    </div> class="card-body">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chart">
+                <!-- Transaction Donought chart Canvas -->
+                <div id="PieChart" class="col-md-6" style="height: 400px; max-width: 500px; margin: 0px auto;"></div>
+            </div>
+            <!-- /.chart-responsive -->
+        </div>
+        <hr>
+        <div class="col-md-6">
+            <div class="chart">
+                <div id="AccountsPerAccountCategories" class="col-md-6" style="height: 400px; max-width: 500px; margin: 0px auto;"></div>
+            </div>
+            <!-- /.chart-responsive -->
+        </div>
+
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!-- ./card-body -->
+    <div class="card-footer">
+        <div class="row">
+            <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                    <h5 class="description-header">$ <?php echo $iB_deposits; ?></h5>
+                    <span class="description-text">TOTAL DEPOSITS</span>
+                </div>
+                <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                    <h5 class="description-header">$ <?php echo $iB_withdrawal; ?></h5>
+                    <span class="description-text">TOTAL WITHDRAWALS</span>
+                </div>
+                <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-3 col-6">
+                <div class="description-block border-right">
+                    <h5 class="description-header">$ <?php echo $iB_Transfers; ?> </h5>
+                    <span class="description-text">TOTAL TRANSFERS</span>
+                </div>
+                <!-- /.description-block -->
+            </div>
+            <!-- /.col -->
+            <div class="col-sm-3 col-6">
+                <div class="description-block">
+                    <h5 class="description-header">$ <?php echo $new_amt; ?> </h5>
+                    <span class="description-text">TOTAL MONEY IN Account</span>
+                </div>
+                <!-- /.description-block -->
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.card-footer -->
+    </div>
+    <!-- /.card -->
+    </div>
+    <!-- /.col -->
+    </div>
+    <!-- /.row -->
+
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+        <div class="col-md-12">
+            <!-- TABLE: Transactions -->
+            <div class="card">
+                <div class="card-header border-transparent">
+                    <h3 class="card-title">Latest Transactions</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover m-0">
+                            <thead>
+                                <tr>
+                                    <th>Transaction Code</th>
+                                    <th>Account No.</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Acc. Owner</th>
+                                    <th>Timestamp</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                //Get latest transactions ;
+                                // $client_id = $_SESSION['client_id'];
+                                // $ret = "SELECT * FROM ib_transactions WHERE  client_id = ?  ORDER BY ib_transactions. created_at DESC ";
+                                // $stmt = $mysqli->prepare($ret);
+                                // $stmt->bind_param('i', $client_id);
+                                // $stmt->execute(); //ok
+                                // $res = $stmt->get_result();
+                                // $cnt = 1;
+                                // while ($row = $res->fetch_object()) {
+                                /* Trim Transaction Timestamp to 
                             *  User Uderstandable Formart  DD-MM-YYYY :
                             */
-                                                $transTstamp = $row->created_at;
-                                                //Perfom some lil magic here
-                                                if ($row->tr_type == 'Deposit') {
-                                                    $alertClass = "<span class='badge badge-success'>$row->tr_type</span>";
-                                                } elseif ($row->tr_type == 'Withdrawal') {
-                                                    $alertClass = "<span class='badge badge-danger'>$row->tr_type</span>";
-                                                } else {
-                                                    $alertClass = "<span class='badge badge-warning'>$row->tr_type</span>";
-                                                }
-                                                ?>
-                                                <tr>
-                                                    <td><?php echo $row->tr_code; ?></a></td>
-                                                    <td><?php echo $row->account_number; ?></td>
-                                                    <td><?php echo $alertClass; ?></td>
-                                                    <td>$ <?php echo $row->transaction_amt; ?></td>
-                                                    <td><?php echo $row->client_name; ?></td>
-                                                    <td><?php echo date("d-M-Y h:m:s ", strtotime($transTstamp)); ?></td>
-                                                </tr>
+                                $transTstamp = $row->created_at;
+                                //Perfom some lil magic here
+                                if ($row->tr_type == 'Deposit') {
+                                    $alertClass = "<span class='badge badge-success'>$row->tr_type</span>";
+                                } elseif ($row->tr_type == 'Withdrawal') {
+                                    $alertClass = "<span class='badge badge-danger'>$row->tr_type</span>";
+                                } else {
+                                    $alertClass = "<span class='badge badge-warning'>$row->tr_type</span>";
+                                }
+                                ?>
+                                <tr>
+                                    <td><?php echo $row->tr_code; ?></a></td>
+                                    <td><?php echo $row->account_number; ?></td>
+                                    <td><?php echo $alertClass; ?></td>
+                                    <td>$ <?php echo $row->transaction_amt; ?></td>
+                                    <td><?php echo $row->client_name; ?></td>
+                                    <td><?php echo date("d-M-Y h:m:s ", strtotime($transTstamp)); ?></td>
+                                </tr>
 
-                                                <?php //} 
-                                                ?>
+                                <?php //} 
+                                ?>
 
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!-- /.table-responsive -->
-                                </div>
-                                <!-- /.card-body -->
-                                <div class="card-footer clearfix">
-                                    <a href="pages_transactions_engine.php" class="btn btn-sm btn-info float-left">View All</a>
-                                </div>
-                                <!-- /.card-footer -->
-                            </div>
-                            <!-- /.card -->
-                        </div>
-                        <!-- /.col -->
+                            </tbody>
+                        </table>
                     </div>
-                    <!-- /.row -->
+                    <!-- /.table-responsive -->
                 </div>
-                <!--/. container-fluid -->
-            </section>
-            <!-- /.content -->
+                <!-- /.card-body -->
+                <div class="card-footer clearfix">
+                    <a href="pages_transactions_engine.php" class="btn btn-sm btn-info float-left">View All</a>
+                </div>
+                <!-- /.card-footer -->
+            </div>
+            <!-- /.card -->
         </div>
-        <!-- /.content-wrapper -->
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    </div>
+    <!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
 
-        <!-- Main Footer -->
-        <?php include("footer.php"); ?>
+    <!-- Main Footer -->
+    <?php include("footer.php"); ?>
 
     </div>
     <!-- ./wrapper -->
