@@ -27,10 +27,11 @@ include "header_voter.php";
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<?php include("dist/_partials/head.php"); ?>
+<?php //include("dist/_partials/head.php"); ?>
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
 
@@ -301,7 +302,7 @@ include "header_voter.php";
         <!-- /.control-sidebar -->
 
         <!-- Main Footer -->
-        <?php include("dist/_partials/footer.php"); ?>
+        <?php include("footer.php"); ?>
 
     </div>
     <!-- ./wrapper -->
