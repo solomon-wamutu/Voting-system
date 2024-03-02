@@ -31,7 +31,8 @@ include "header_voter.php";
 <!DOCTYPE html>
 <html lang="en">
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<?php //include("dist/_partials/head.php"); ?>
+<?php //include("dist/_partials/head.php"); 
+?>
 
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
 
@@ -52,7 +53,7 @@ include "header_voter.php";
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Client Dashboard</h1>
+                            <h1 class="m-0 text-dark">Make a vote</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -68,61 +69,68 @@ include "header_voter.php";
             <!-- Main content -->
             <section class="content">
                 <div class="container-fluid">
-                    <div class="row">
-                        <!--iBank Deposits -->
-                        <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-info elevation-1"><i class="fas fa-upload"></i></span>
-                                <div class="info-box-content">
-                                    <!-- <span class="info-box-text">Deposits</span>
+                    <form action="submit_vote.php" name="vote" method="post" id="myform">
+                        <div class="row">
+                            <!--iBank Deposits -->
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="info-box">
+                                    <span class="info-box-icon bg-info elevation-1"><i class="fas fa-upload"></i></span>
+                                    <div class="info-box-content">
+                                        <!-- <span class="info-box-text">Deposits</span>
                                     <span class="info-box-number">
-                                        $ <?php //echo $iB_deposits; ?>
+                                        $ <?php //echo $iB_deposits; 
+                                            ?>
                                     </span> -->
+                                        <input type="radio" name="lan" value="BJP"> BJP<BR>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!----./ iBank Deposits-->
+                            <!----./ iBank Deposits-->
 
-                        <!--iBank Withdrwals-->
-                        <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box mb-3">
-                                <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-upload"></i></span>
+                            <!--iBank Withdrwals-->
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="info-box mb-3">
+                                    <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-upload"></i></span>
 
-                                <div class="info-box-content">
-                                    <!-- <span class="info-box-text">Withdrawals</span>
-                                    <span class="info-box-number">$ <?php // echo $iB_withdrawal; ?> </span> -->
+                                    <div class="info-box-content">
+                                        <!-- <span class="info-box-text">Withdrawals</span>
+                                    <span class="info-box-number">$ <?php // echo $iB_withdrawal; 
+                                                                    ?> </span> -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Withdrawals-->
+                            <!-- Withdrawals-->
 
-                        <!-- fix for small devices only -->
-                        <div class="clearfix hidden-md-up"></div>
+                            <!-- fix for small devices only -->
+                            <div class="clearfix hidden-md-up"></div>
 
-                        <!--Transfers-->
-                        <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box mb-3">
-                                <span class="info-box-icon bg-success elevation-1"><i class="fas fa-upload"></i></span>
-                                <div class="info-box-content">
-                                    <!-- <span class="info-box-text">Transfers</span>
-                                    <span class="info-box-number">$ <?php // echo $iB_Transfers; ?></span> -->
+                            <!--Transfers-->
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="info-box mb-3">
+                                    <span class="info-box-icon bg-success elevation-1"><i class="fas fa-upload"></i></span>
+                                    <div class="info-box-content">
+                                        <!-- <span class="info-box-text">Transfers</span>
+                                    <span class="info-box-number">$ <?php // echo $iB_Transfers; 
+                                                                    ?></span> -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- /.Transfers-->
+                            <!-- /.Transfers-->
 
-                        <!--Balances-->
-                        <div class="col-12 col-sm-6 col-md-3">
-                            <div class="info-box mb-3">
-                                <span class="info-box-icon bg-purple elevation-1"><i class="fas fa-upload"></i></span>
-                                <div class="info-box-content">
-                                    <!-- <span class="info-box-text">Wallet Balance</span>
-                                    <span class="info-box-number">$ <?php //echo $TotalBalInAccount; ?></span> -->
+                            <!--Balances-->
+                            <div class="col-12 col-sm-6 col-md-3">
+                                <div class="info-box mb-3">
+                                    <span class="info-box-icon bg-purple elevation-1"><i class="fas fa-upload"></i></span>
+                                    <div class="info-box-content">
+                                        <!-- <span class="info-box-text">Wallet Balance</span>
+                                    <span class="info-box-number">$ <?php //echo $TotalBalInAccount; 
+                                                                    ?></span> -->
+                                    </div>
                                 </div>
                             </div>
+                            <!-- ./Balances-->
                         </div>
-                        <!-- ./Balances-->
-                    </div>
+                    </form>
 
                     <div class="row">
                         <div class="col-md-12">
@@ -248,29 +256,30 @@ include "header_voter.php";
                                                 // $res = $stmt->get_result();
                                                 // $cnt = 1;
                                                 // while ($row = $res->fetch_object()) {
-                                                    /* Trim Transaction Timestamp to 
+                                                /* Trim Transaction Timestamp to 
                             *  User Uderstandable Formart  DD-MM-YYYY :
                             */
-                                                    $transTstamp = $row->created_at;
-                                                    //Perfom some lil magic here
-                                                    if ($row->tr_type == 'Deposit') {
-                                                        $alertClass = "<span class='badge badge-success'>$row->tr_type</span>";
-                                                    } elseif ($row->tr_type == 'Withdrawal') {
-                                                        $alertClass = "<span class='badge badge-danger'>$row->tr_type</span>";
-                                                    } else {
-                                                        $alertClass = "<span class='badge badge-warning'>$row->tr_type</span>";
-                                                    }
+                                                $transTstamp = $row->created_at;
+                                                //Perfom some lil magic here
+                                                if ($row->tr_type == 'Deposit') {
+                                                    $alertClass = "<span class='badge badge-success'>$row->tr_type</span>";
+                                                } elseif ($row->tr_type == 'Withdrawal') {
+                                                    $alertClass = "<span class='badge badge-danger'>$row->tr_type</span>";
+                                                } else {
+                                                    $alertClass = "<span class='badge badge-warning'>$row->tr_type</span>";
+                                                }
                                                 ?>
-                                                    <tr>
-                                                        <td><?php echo $row->tr_code; ?></a></td>
-                                                        <td><?php echo $row->account_number; ?></td>
-                                                        <td><?php echo $alertClass; ?></td>
-                                                        <td>$ <?php echo $row->transaction_amt; ?></td>
-                                                        <td><?php echo $row->client_name; ?></td>
-                                                        <td><?php echo date("d-M-Y h:m:s ", strtotime($transTstamp)); ?></td>
-                                                    </tr>
+                                                <tr>
+                                                    <td><?php echo $row->tr_code; ?></a></td>
+                                                    <td><?php echo $row->account_number; ?></td>
+                                                    <td><?php echo $alertClass; ?></td>
+                                                    <td>$ <?php echo $row->transaction_amt; ?></td>
+                                                    <td><?php echo $row->client_name; ?></td>
+                                                    <td><?php echo date("d-M-Y h:m:s ", strtotime($transTstamp)); ?></td>
+                                                </tr>
 
-                                                <?php //} ?>
+                                                <?php //} 
+                                                ?>
 
                                             </tbody>
                                         </table>
